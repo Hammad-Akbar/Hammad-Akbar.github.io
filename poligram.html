@@ -1,0 +1,137 @@
+<!-- Poligram Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Poligram | Project Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./main.3f6952e4.css" rel="stylesheet">
+
+  <style>
+    /* Carousel Container */
+    .custom-carousel {
+      max-width: 420px;
+      margin: 0 auto 40px;
+      position: relative;
+    }
+
+    /* Image */
+    .custom-carousel .carousel-inner > .item > img {
+      width: 100%;
+      height: auto;
+      max-height: 650px;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Controls - center vertically */
+    .custom-carousel .carousel-control.left,
+    .custom-carousel .carousel-control.right {
+      background-image: none !important;
+      background-color: transparent !important;
+      text-shadow: none;
+      box-shadow: none;
+      color: #333;
+      font-size: 28px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+    }
+
+    .custom-carousel .carousel-control.left {
+      left: -45px;
+    }
+
+    .custom-carousel .carousel-control.right {
+      right: -45px;
+    }
+
+    /* Indicators */
+    .custom-carousel .carousel-indicators {
+      bottom: -30px;
+    }
+    .custom-carousel .carousel-indicators li {
+      background-color: #bbb;
+    }
+    .custom-carousel .carousel-indicators .active {
+      background-color: #333;
+    }
+
+    @media (max-width: 480px) {
+      .custom-carousel .carousel-control.left,
+      .custom-carousel .carousel-control.right {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-fixed-top navbar-default">
+      <div class="container">
+        <a href="works.html" class="navbar-brand">← Back to Works</a>
+      </div>
+    </nav>
+  </header>
+  <div class="section-container" style="padding-top: 80px;">
+    <div class="container text-center">
+      <h1 class="h2">Poligram (2020)</h1>
+      <p class="lead">Learn about American politics, take ideology quizzes, participate in public polls, and explore the political geography of the United States of America.</p>
+
+      <!-- Image Gallery Carousel -->
+      <div id="poligramCarousel" class="carousel slide custom-carousel" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#poligramCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#poligramCarousel" data-slide-to="1"></li>
+          <li data-target="#poligramCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="./assets/images/poligram/poligram1.png" alt="Screenshot 1">
+          </div>
+          <div class="item">
+            <img src="./assets/images/poligram/poligram2.png" alt="Screenshot 2">
+          </div>
+          <div class="item">
+            <img src="./assets/images/poligram/poligram3.png" alt="Screenshot 3">
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#poligramCarousel" data-slide="prev">
+          <span class="fa fa-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#poligramCarousel" data-slide="next">
+          <span class="fa fa-chevron-right"></span>
+        </a>
+      </div>
+
+      <p><a href="https://poligram.herokuapp.com/#/" class="btn btn-default">Visit Project</a></p>
+      <div class="text-left" style="max-width: 800px; margin: auto;">
+        <ul>
+          <li>Built with engineers from Bloomberg and Facebook using Scrum and Agile methodologies.</li>
+          <li>Led as Project Manager and Lead Software Engineer.</li>
+          <li>Tech stack: Python-Flask, ReactJS, JavaScript, HTML, CSS, PostgreSQL, Git, Heroku.</li>
+          <li>Automated testing with Circle CI, OAuth login via AWS EC2.</li>
+          <li>Used React Router, Socket.IO, News API, Dictionary API.</li>
+          <li>Created JSON data for map details and ideology quiz.</li>
+          <li>Database design stores user login state and feedback.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+    $('#poligramCarousel').carousel({
+      interval: 5000
+    });
+  </script>
+</body>
+</html>
